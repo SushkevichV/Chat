@@ -16,7 +16,7 @@ import lombok.Getter;
 
 @Component
 public class Storage {
-	@Getter // не работает
+	
 	private Queue<ChatMessage> messages = new ConcurrentLinkedQueue<>(); // многопоточная очередь
 	
 	private ComponentEventBus eventBus = new ComponentEventBus(new Div());
@@ -45,7 +45,6 @@ public class Storage {
 
 	
 	// вложенный класс
-	@Getter // не работает
 	@AllArgsConstructor // не работает
 	public static class ChatMessage{
 		private String author;
